@@ -8,6 +8,7 @@
 * [#4702 - New UI for listing object uses, including in RichText and StreamField](https://github.com/wagtail/wagtail/pull/4702)
 * [#5361 - Offer no delete options, as is on pages and snippets #5361](https://github.com/wagtail/wagtail/pull/5361)
 * [#5392 - Allow the tabs content to define the tab width on xs screens to stop cutting of text](https://github.com/wagtail/wagtail/pull/5392)
+
 Wagtail is an open source content management system built on Django, with a strong community and commercial support. It's focused on user experience, and offers precise control for designers and developers.
 
 ![Wagtail screenshot](https://cdn.rawgit.com/wagtail/wagtail/master/.github/wagtail-screenshot-with-browser.png)
