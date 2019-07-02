@@ -1,4 +1,11 @@
+---
 version: 2
+
+templates:
+  filter_deploy: &filter_deploy
+    filters:
+      branches:
+        only: master
 
 jobs:
   backend:
@@ -47,9 +54,28 @@ jobs:
       - run: npm run dist
       - run: bash <(curl -s https://codecov.io/bash) -F frontend
 
+  build_and_deploy:
+    docker:
+      - image: circleci/python:3.6.4-node
+    steps:
+      - checkout
+      - run: pipenv install -e .[testing]
+      - run: pipenv install awscli==1.14.0
+      # We need to pin to a certain version of the awscli here because of a conflict in the botocore lib otherwise
+      - run: npm install --no-save
+      - run: python setup.py sdist
+      - run: pipenv run aws s3 cp ./dist/* s3://$AWS_S3_BUCKET --acl public-read
+
+
+
 workflows:
     version: 2
-    test:
+    build-test-deploy:
         jobs:
           - backend
           - frontend
+          - build_and_deploy:
+              <<: *filter_deploy
+              requires:
+                - backend
+                - frontend
