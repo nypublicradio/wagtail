@@ -8,8 +8,9 @@
 * [#4702 - New UI for listing object uses, including in RichText and StreamField](https://github.com/wagtail/wagtail/pull/4702)
 * [#5361 - Offer no delete options, as is on pages and snippets #5361](https://github.com/wagtail/wagtail/pull/5361)
 * [#5392 - Allow the tabs content to define the tab width on xs screens to stop cutting of text](https://github.com/wagtail/wagtail/pull/5392)
-* [#5429 -Break listing titles by word so action buttons are visible on smaller screens](https://github.com/wagtail/wagtail/pull/5429)
+* [#5429 - Break listing titles by word so action buttons are visible on smaller screens](https://github.com/wagtail/wagtail/pull/5429)
 * [#5431 - Break long file titles on multi file upload listing](https://github.com/wagtail/wagtail/pull/5431)
+* [#5384 - Resolves Lack of construct_hook_name for settings_menu](https://github.com/wagtail/wagtail/pull/5384)
 
 Wagtail is an open source content management system built on Django, with a strong community and commercial support. It's focused on user experience, and offers precise control for designers and developers.
 
