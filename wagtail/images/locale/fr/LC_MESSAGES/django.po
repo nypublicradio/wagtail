@@ -4,7 +4,7 @@
 #
 # Translators:
 # Adrien <laadrien@gmail.com>, 2014
-# Benoît Vogel <contact@spicy-informatique.com>, 2016
+# Benoît Vogel <contact@spicy-informatique.com>, 2016,2019
 # Bertrand Bordage <bordage.bertrand@gmail.com>, 2015-2018
 # fpoulain <fpoulain@metrodore.fr>, 2018
 # Léo <leo@naeka.fr>, 2016
@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wagtail\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 23:06+0100\n"
-"PO-Revision-Date: 2019-04-08 22:08+0000\n"
+"POT-Creation-Date: 2019-07-09 14:27+0100\n"
+"PO-Revision-Date: 2019-07-09 13:29+0000\n"
 "Last-Translator: Matt Westcott <matthew@torchbox.com>\n"
 "Language-Team: French (http://www.transifex.com/torchbox/wagtail/language/"
 "fr/)\n"
@@ -58,6 +58,12 @@ msgstr "Image %s non valide."
 msgid "This file is too big (%%s). Maximum filesize %s."
 msgstr ""
 "Ce fichier est trop gros (%%s). La taille de fichier maximale est de %s."
+
+#, python-format
+msgid "This file has too many pixels (%%s). Maximum pixels %s."
+msgstr ""
+"Ce fichier a un trop grand nombre de pixels (%%s). Nombre maximum de pixels "
+"%s."
 
 #, python-format
 msgid "This file is too big. Maximum filesize %s."
@@ -180,24 +186,6 @@ msgstr "Choisissez un format"
 
 msgid "Insert image"
 msgstr "Insérer l'image"
-
-#, python-format
-msgid ""
-"\n"
-"        <span>%(total)s</span> Image\n"
-"    "
-msgid_plural ""
-"\n"
-"        <span>%(total)s</span> Images\n"
-"    "
-msgstr[0] ""
-"\n"
-"        <span>%(total)s</span> image\n"
-"    "
-msgstr[1] ""
-"\n"
-"        <span>%(total)s</span> images\n"
-"    "
 
 msgid "Change image file:"
 msgstr "Changer le fichier d'image"

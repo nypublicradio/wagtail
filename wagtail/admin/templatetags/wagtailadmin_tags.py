@@ -1,4 +1,5 @@
 import itertools
+import json
 from warnings import warn
 
 from django import template
@@ -9,12 +10,14 @@ from django.contrib.messages.constants import DEFAULT_TAGS as MESSAGE_TAGS
 from django.template.defaultfilters import stringfilter
 from django.template.loader import render_to_string
 from django.templatetags.static import static
-from django.utils.html import format_html
+from django.utils.html import format_html, format_html_join
 from django.utils.safestring import mark_safe
+from django.utils.translation import ugettext_lazy as _
 
 from wagtail.admin.menu import admin_menu
 from wagtail.admin.navigation import get_explorable_root_page
 from wagtail.admin.search import admin_search_areas
+from wagtail.admin.utils import get_js_translation_strings
 from wagtail.core import hooks
 from wagtail.core.models import (
     CollectionViewRestriction, Page, PageViewRestriction, UserPagePermissionsProxy)
@@ -286,7 +289,27 @@ def querystring(context, **kwargs):
 
 
 @register.simple_tag(takes_context=True)
-def table_header_label(context, label=None, sortable=True, ordering=None, sort_context_var='ordering', sort_param='ordering', sort_field=None):
+def page_table_header_label(context, label=None, parent_page_title=None, **kwargs):
+    """
+    Wraps table_header_label to add a title attribute based on the parent page title and the column label
+    """
+    if label:
+        translation_context = {'parent': parent_page_title, 'label': label}
+        ascending_title_text = _("Sort the order of child pages within '%(parent)s' by '%(label)s' in ascending order.") % translation_context
+        descending_title_text = _("Sort the order of child pages within '%(parent)s' by '%(label)s' in descending order.") % translation_context
+    else:
+        ascending_title_text = None
+        descending_title_text = None
+
+    return table_header_label(context, label=label, ascending_title_text=ascending_title_text, descending_title_text=descending_title_text, **kwargs)
+
+
+@register.simple_tag(takes_context=True)
+def table_header_label(
+    context, label=None, sortable=True, ordering=None,
+    sort_context_var='ordering', sort_param='ordering', sort_field=None,
+    ascending_title_text=None, descending_title_text=None
+):
     """
     A label to go in a table header cell, optionally with a 'sort' link that alternates between
     forward and reverse sorting
@@ -300,6 +323,9 @@ def table_header_label(context, label=None, sortable=True, ordering=None, sort_c
         For example, if sort_param='ordering' and sort_field='title', then a URL parameter of
         ordering=title indicates that the listing is ordered forwards on this column, and a URL parameter
         of ordering=-title indicated that the listing is ordered in reverse on this column
+    ascending_title_text = title attribute to use on the link when the link action will sort in ascending order
+    descending_title_text = title attribute to use on the link when the link action will sort in descending order
+
     To disable sorting on this column, set sortable=False or leave sort_field unspecified.
     """
     if not sortable or not sort_field:
@@ -312,23 +338,37 @@ def table_header_label(context, label=None, sortable=True, ordering=None, sort_c
 
     if ordering == sort_field:
         # currently ordering forwards on this column; link should change to reverse ordering
-        url = querystring(context, **{sort_param: reverse_sort_field})
-        classname = "icon icon-arrow-down-after teal"
+        attrs = {
+            'href': querystring(context, **{sort_param: reverse_sort_field}),
+            'class': "icon icon-arrow-down-after teal",
+        }
+        if descending_title_text is not None:
+            attrs['title'] = descending_title_text
 
     elif ordering == reverse_sort_field:
         # currently ordering backwards on this column; link should change to forward ordering
-        url = querystring(context, **{sort_param: sort_field})
-        classname = "icon icon-arrow-up-after teal"
+        attrs = {
+            'href': querystring(context, **{sort_param: sort_field}),
+            'class': "icon icon-arrow-up-after teal",
+        }
+        if ascending_title_text is not None:
+            attrs['title'] = ascending_title_text
 
     else:
         # not currently ordering on this column; link should change to forward ordering
-        url = querystring(context, **{sort_param: sort_field})
-        classname = "icon icon-arrow-down-after"
+        attrs = {
+            'href': querystring(context, **{sort_param: sort_field}),
+            'class': "icon icon-arrow-down-after",
+        }
+        if ascending_title_text is not None:
+            attrs['title'] = ascending_title_text
+
+    attrs_string = format_html_join(' ', '{}="{}"', attrs.items())
 
     return format_html(
         # need whitespace around label for correct positioning of arrow icon
-        '<a href="{url}" class="{classname}"> {label} </a>',
-        url=url, classname=classname, label=label
+        '<a {attrs}> {label} </a>',
+        attrs=attrs_string, label=label
     )
 
 
@@ -436,3 +476,8 @@ def ajax_pagination_nav_deprecation_warning():
          'Use wagtailadmin/shared/ajax_pagination_nav.html instead',
          category=RemovedInWagtail27Warning)
     return ''
+
+
+@register.simple_tag
+def js_translation_strings():
+    return mark_safe(json.dumps(get_js_translation_strings()))

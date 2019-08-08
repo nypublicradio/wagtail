@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wagtail\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 23:06+0100\n"
-"PO-Revision-Date: 2019-04-08 22:07+0000\n"
+"POT-Creation-Date: 2019-07-09 14:27+0100\n"
+"PO-Revision-Date: 2019-07-09 13:29+0000\n"
 "Last-Translator: Matt Westcott <matthew@torchbox.com>\n"
 "Language-Team: Czech (http://www.transifex.com/torchbox/wagtail/language/"
 "cs/)\n"
@@ -257,9 +257,6 @@ msgstr "Obnovení hesla"
 msgid "Reset your password"
 msgstr "Nastavit nové heslo"
 
-msgid "Edit"
-msgstr "Upravit"
-
 msgid "Page"
 msgstr "Stránka"
 
@@ -274,9 +271,6 @@ msgstr "Žádné výsledky"
 
 msgid "Server Error"
 msgstr "Chyba serveru"
-
-msgid "See children"
-msgstr "Zobrazit podstránky"
 
 msgid "See all"
 msgstr "Zobrazit vse"
@@ -317,6 +311,93 @@ msgstr "Zobrazit chyby"
 msgid ""
 "The editor just crashed. Content has been reset to the last saved version."
 msgstr "Editor zhavaroval. Obsah byl obnoven z poslední uložené verze."
+
+msgid "Broken link"
+msgstr "Nefunkční odkaz"
+
+msgid "Missing document"
+msgstr "Chybějící dokument"
+
+msgid "Close"
+msgstr "Zavřít"
+
+msgid "January"
+msgstr "leden"
+
+msgid "February"
+msgstr "únor"
+
+msgid "March"
+msgstr "březen"
+
+msgid "April"
+msgstr "duben"
+
+msgid "May"
+msgstr "květen"
+
+msgid "June"
+msgstr "červen"
+
+msgid "July"
+msgstr "červenec"
+
+msgid "August"
+msgstr "srpen"
+
+msgid "September"
+msgstr "září"
+
+msgid "October"
+msgstr "říjen"
+
+msgid "November"
+msgstr "listopad"
+
+msgid "December"
+msgstr "prosinec"
+
+msgid "Sunday"
+msgstr "neděle"
+
+msgid "Monday"
+msgstr "pondělí"
+
+msgid "Tuesday"
+msgstr "úterý"
+
+msgid "Wednesday"
+msgstr "středa"
+
+msgid "Thursday"
+msgstr "čtvrtek"
+
+msgid "Friday"
+msgstr "pátek"
+
+msgid "Saturday"
+msgstr "dobota"
+
+msgid "Sun"
+msgstr "ne"
+
+msgid "Mon"
+msgstr "po"
+
+msgid "Tue"
+msgstr "út"
+
+msgid "Wed"
+msgstr "st"
+
+msgid "Thu"
+msgstr "čt"
+
+msgid "Fri"
+msgstr "pá"
+
+msgid "Sat"
+msgstr "so"
 
 msgid "Dashboard"
 msgstr "Dashboard"
@@ -497,6 +578,9 @@ msgstr "Schválit"
 msgid "Reject"
 msgstr "Zamítnout"
 
+msgid "Edit"
+msgstr "Upravit"
+
 msgid "Preview"
 msgstr "Náhled"
 
@@ -521,28 +605,6 @@ msgstr "Publikováno"
 
 msgid "Site summary"
 msgstr "Přehled obsahu"
-
-#, python-format
-msgid ""
-"\n"
-"        <span>%(total)s</span> Page\n"
-"    "
-msgid_plural ""
-"\n"
-"        <span>%(total)s</span> Pages\n"
-"    "
-msgstr[0] ""
-"\n"
-"<span>%(total)s</span> Stránka"
-msgstr[1] ""
-"\n"
-"<span>%(total)s</span> Stránky"
-msgstr[2] ""
-"\n"
-"<span>%(total)s</span> Stránek"
-msgstr[3] ""
-"\n"
-"<span>%(total)s</span> stránek"
 
 msgid "Sign in"
 msgstr "Přihlásit se"
@@ -931,6 +993,9 @@ msgstr "Tato stránka není veřejně viditelná"
 msgid "Disable ordering of child pages"
 msgstr "Vypnout řazení podstránek"
 
+msgid "Sort"
+msgstr "Třídění"
+
 msgid "Enable ordering of child pages"
 msgstr "Zapnout řazení podstránek"
 
@@ -955,9 +1020,6 @@ msgstr ""
 "\n"
 "Není možné zobrazit náhled této stránky protože zbývají nějaké chyby.\n"
 "Zavřete tuto kartu, opravte chyby ve stránce a znovu použijte náhled."
-
-msgid "Close"
-msgstr "Zavřít"
 
 #, python-format
 msgid "Comparing %(title)s"
@@ -1132,84 +1194,6 @@ msgstr "Domů"
 msgid "All collections"
 msgstr "Všechny kolekce"
 
-msgid "January"
-msgstr "leden"
-
-msgid "February"
-msgstr "únor"
-
-msgid "March"
-msgstr "březen"
-
-msgid "April"
-msgstr "duben"
-
-msgid "May"
-msgstr "květen"
-
-msgid "June"
-msgstr "červen"
-
-msgid "July"
-msgstr "červenec"
-
-msgid "August"
-msgstr "srpen"
-
-msgid "September"
-msgstr "září"
-
-msgid "October"
-msgstr "říjen"
-
-msgid "November"
-msgstr "listopad"
-
-msgid "December"
-msgstr "prosinec"
-
-msgid "Sunday"
-msgstr "neděle"
-
-msgid "Monday"
-msgstr "pondělí"
-
-msgid "Tuesday"
-msgstr "úterý"
-
-msgid "Wednesday"
-msgstr "středa"
-
-msgid "Thursday"
-msgstr "čtvrtek"
-
-msgid "Friday"
-msgstr "pátek"
-
-msgid "Saturday"
-msgstr "dobota"
-
-msgid "Sun"
-msgstr "ne"
-
-msgid "Mon"
-msgstr "po"
-
-msgid "Tue"
-msgstr "út"
-
-msgid "Wed"
-msgstr "st"
-
-msgid "Thu"
-msgstr "čt"
-
-msgid "Fri"
-msgstr "pá"
-
-msgid "Sat"
-msgstr "so"
-
 msgid "Edit your account"
 msgstr "Upravte svůj účet"
 
@@ -1302,6 +1286,9 @@ msgstr "Korean"
 msgid "Lithuanian"
 msgstr "Lithuanian"
 
+msgid "Mongolian"
+msgstr "mongolština"
+
 msgid "Norwegian Bokmål"
 msgstr "Norwegian Bokmål"
 
@@ -1332,8 +1319,17 @@ msgstr "Swedish"
 msgid "Slovak"
 msgstr "Slovak"
 
+msgid "Thai"
+msgstr "thajština"
+
 msgid "Ukrainian"
 msgstr "Ukrainian"
+
+msgid "Chinese (Simplified)"
+msgstr "čínština (zjednodušená)"
+
+msgid "Chinese (Traditional)"
+msgstr "čínština (tradiční)"
 
 msgid "Sorry, you do not have permission to access this area."
 msgstr "Promiňte, ale na přístup k této části nemáte oprávnění."
@@ -1450,6 +1446,13 @@ msgstr "Stránka '{0}' byla smazána."
 
 msgid "Page '{0}' unpublished."
 msgstr "Stránce '{0}' byla zrušena publikace."
+
+msgid ""
+"The slug '{0}' is already in use at the selected parent page. Make sure the "
+"slug is unique and try again"
+msgstr ""
+"Slug (identifikátor) '{0}' je už použit v nadřazené stránce. Použijte "
+"unikátní identifikátor a zkuste to znova"
 
 msgid "Page '{0}' moved."
 msgstr "Stránka '{0}' byla přesunuta."
@@ -1570,6 +1573,9 @@ msgstr "Nečíslovaný seznam"
 msgid "Numbered list"
 msgstr "Číslovaný seznam"
 
+msgid "Blockquote"
+msgstr "Blockquote (Zvýrazněný blok)"
+
 msgid "Bold"
 msgstr "Tučné"
 
@@ -1578,6 +1584,18 @@ msgstr "Šikmé"
 
 msgid "Link"
 msgstr "Odkaz"
+
+msgid "Superscript"
+msgstr "Superscript (Horní index)"
+
+msgid "Subscript"
+msgstr "Subscript (Dolní index)"
+
+msgid "Strikethrough"
+msgstr "Přeškrtnuté"
+
+msgid "Code"
+msgstr "Kód"
 
 msgid "Choose an item"
 msgstr "Zvolit položku"
