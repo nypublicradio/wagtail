@@ -1,17 +1,18 @@
 # Wagtail - NYPR fork
 
 ### Includes the following patches on top of upstream master:
+PR | Status
+-- | ------
+[#5266 - Support required fields on custom image models in the multiple image uploader](https://github.com/wagtail/wagtail/pull/5266) | Open
+[#5286 - Output form media on add/edit image forms](https://github.com/wagtail/wagtail/pull/5286) | Closed
+[#5353 - Support custom add/edit page views on a per-page-type basis](https://github.com/wagtail/wagtail/pull/5353) | Open
+[#4702 - New UI for listing object uses, including in RichText and StreamField](https://github.com/wagtail/wagtail/pull/4702) | Open
+[#5392 - Allow the tabs content to define the tab width on xs screens to stop cutting of text](https://github.com/wagtail/wagtail/pull/5392) | Closed
+[#5429 - Break listing titles by word so action buttons are visible on smaller screens](https://github.com/wagtail/wagtail/pull/5429) | Closed
+[#5431 - Break long file titles on multi file upload listing](https://github.com/wagtail/wagtail/pull/5431) | Closed
 
-* [#5266 - Support required fields on custom image models in the multiple image uploader](https://github.com/wagtail/wagtail/pull/5266)
-* [#5286 - Output form media on add/edit image forms](https://github.com/wagtail/wagtail/pull/5286)
-* [#5353 - Support custom add/edit page views on a per-page-type basis](https://github.com/wagtail/wagtail/pull/5353)
-* [#4702 - New UI for listing object uses, including in RichText and StreamField](https://github.com/wagtail/wagtail/pull/4702)
-* [#5361 - Offer no delete options, as is on pages and snippets #5361](https://github.com/wagtail/wagtail/pull/5361)
-* [#5392 - Allow the tabs content to define the tab width on xs screens to stop cutting of text](https://github.com/wagtail/wagtail/pull/5392)
-* [#5429 - Break listing titles by word so action buttons are visible on smaller screens](https://github.com/wagtail/wagtail/pull/5429)
-* [#5431 - Break long file titles on multi file upload listing](https://github.com/wagtail/wagtail/pull/5431)
-* [#5384 - Resolves Lack of construct_hook_name for settings_menu](https://github.com/wagtail/wagtail/pull/5384)
-
+(Last Updated 12/17/19 for Wagtail v2.6.1)
+___
 Wagtail is an open source content management system built on Django, with a strong community and commercial support. It's focused on user experience, and offers precise control for designers and developers.
 
 ![Wagtail screenshot](https://cdn.rawgit.com/wagtail/wagtail/master/.github/wagtail-screenshot-with-browser.png)
