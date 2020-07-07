@@ -6,7 +6,7 @@ PR | Status
 [#5266 - Support required fields on custom image models in the multiple image uploader](https://github.com/wagtail/wagtail/pull/5266) | :white_check_mark: Closed
 [#5286 - Output form media on add/edit image forms](https://github.com/wagtail/wagtail/pull/5286) | :white_check_mark: Closed
 [#5353 - Support custom add/edit page views on a per-page-type basis](https://github.com/wagtail/wagtail/pull/5353) | :red_circle: Open
-[#4702 - New UI for listing object uses, including in RichText and StreamField](https://github.com/wagtail/wagtail/pull/4702) | :red_circle: Open
+[#6129 - New UI for listing object uses, including in RichText and StreamField](https://github.com/wagtail/wagtail/pull/6129) | :red_circle: Open
 [#5392 - Allow the tabs content to define the tab width on xs screens to stop cutting of text](https://github.com/wagtail/wagtail/pull/5392) | :white_check_mark: Closed
 [#5429 - Break listing titles by word so action buttons are visible on smaller screens](https://github.com/wagtail/wagtail/pull/5429) | :white_check_mark: Closed
 [#5431 - Break long file titles on multi file upload listing](https://github.com/wagtail/wagtail/pull/5431) | :white_check_mark: Closed
